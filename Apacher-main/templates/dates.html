@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dates</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #a7e6eb;
+      font-family: Arial, sans-serif;
+      color: #333;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 40px;
+      font-family: "Raleway", cursive;
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    label {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    input[type="date"] {
+      padding: 8px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 200px;
+      margin-bottom: 10px;
+    }
+
+    input[type="submit"] {
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #002629;
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #fff;
+  color: #333;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      text-align: left;
+    }
+
+    li {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Выборка по датам</h1>
+  <form action="/dates" method="GET">
+    <label for="start_date">Начальная дата:</label>
+    <input type="date" id="start_date" name="start_date" required>
+    <br>
+    <label for="end_date">Конечная дата:</label>
+    <input type="date" id="end_date" name="end_date">
+    <br>
+    <input type="submit" value="Посмотреть даты">
+  </form>
+
+  {% if dates %}
+    <h2>Выбранные даты:</h2>
+    <ul>
+      {% for date in dates %}
+        <li>{{ date }}</li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    {% if start_date %}
+      <p>Дат в данном промежутке не обнаружено</p>
+    {% endif %}
+  {% endif %}
+</body>
+</html>

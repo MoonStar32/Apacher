@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Моя красивая страница</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="content">
+    <div class="video-container">
+      <video src="{{ url_for('static', filename='videos/your-looping-video.mp4') }}" controls></video>
+        <h2>Apacher</h2>
+        <a class="button" onclick="showMiniWindow()">Посмотреть</a>
+    </div>
+  </div>
+  
+  <div class="mini-window-container" id="mini-window-container">
+    <div class="mini-window" id="mini-window">
+      <h2>Выберите действие:</h2>
+      
+      <ul class="mini-window-button-list">
+        <button class="mini-window-buttonf" onclick="location.href='/ip-addresses'">Посмотреть все IP-адреса</button>
+        <button class="mini-window-buttons" onclick="location.href='/dates'">Посмотреть даты</button>
+        <button class="mini-window-buttont" onclick="location.href='/upload_form'">Загрузить лог-файл</button>
+      </ul>
+      
+      <button class="close-button" onclick="hideMiniWindow()">✖</button>
+    </div>
+  </div>
+  
+  <div class="overlay" id="overlay"></div>
+</body>
+</html>

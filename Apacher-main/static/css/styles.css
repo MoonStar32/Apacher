@@ -1,0 +1,258 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #002629;
+  }
+  
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  nav ul li a {
+    color: #002629;
+    text-decoration: none;
+  }
+  
+  .choice {
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    background-color: #002629;
+    scroll-behavior: smooth;
+  }
+  
+  .choice h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 32px;
+    color: #333;
+  }
+  
+  .choice p {
+    font-size: 18px;
+    color: #777;
+  }
+  
+  .choice button {
+ 
+    margin: 10px auto;
+    padding: 15px 30px;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    background-color:#002629;
+    scroll-behavior: smooth;
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+    
+  }
+  
+  .choice button:hover {
+    background-color: #fff;
+  color: #333;
+  }
+
+  
+  .mini-window-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+  }
+
+  .mini-window {
+    width: 400px;
+    
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+  }
+
+  
+  .mini-window h2 {
+    font-size: 24px;
+    color: #000000;
+    margin-bottom: 20px;
+    font-family: "Quicksand", cursive;
+  }
+  
+  .mini-window button {
+    margin-bottom: 10px;
+  }
+  
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+  }
+
+
+  .close-button {
+    position: absolute;
+    width: 10;
+    height: 10;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #000000;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .close-button:hover {
+    background-color: #00b8b5;
+  }
+
+  .mini-window-button-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .mini-window-buttonf,
+  .mini-window-buttons,
+  .mini-window-buttont {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 50px;
+    background-color: #002629;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .mini-window-buttonf:hover,
+  .mini-window-buttons:hover,
+  .mini-window-buttont:hover {
+    background-color: #55ced6;
+    cursor: pointer;
+  }
+  
+  .mini-window-buttonf:active,
+  .mini-window-buttons:active,
+  .mini-window-buttont:active {
+    background-color: #274f9c;
+  }
+  
+  
+
+  .content {
+    background-color: #002629;
+    padding: 40px;
+    text-align: center;
+  }
+  .button {
+    background-color: #002629;
+    padding: 40px;
+    text-align: center;
+  }
+  
+  
+  .image-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .image-container img {
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .image-container h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 24px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+
+    
+  }
+  .video-container {
+    position: relative;
+    display: inline-block;
+    background-color: #002629;
+  }
+  
+  .video-container video {
+    background-color: #002629;
+    width: 900px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  .video-container h2 {
+    position: absolute;
+    top: 31%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 200px;
+  font-family: 'Dancing Script', cursive;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0);
+  }
+
+  .button {
+    scroll-behavior: smooth;
+  position: absolute;
+  top: 94%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #fff;
+  color: #333;
+}
+  
+  @font-face {
+    font-family: 'Dancing Script';
+    src: url(path/to/dancing_script.ttf);
+    /* или используйте ссылку на файл шрифта */
+    /* src: url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400&display=swap'); */
+  }
+  
+  
